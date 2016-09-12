@@ -69,6 +69,8 @@ public class Main {
     public static void setStoreName(String name) {
         // update the value of mStoreName, then explain in a comment why you can access that variable
         // from within the scope of this method, since mStoreName is NOT local to this method.
+        
+        mStoreName = name;
     }
 
 
@@ -82,6 +84,9 @@ public class Main {
      * @return the completed String
      */
     public static String greetCustomer(String customerName) {
+     
+     String greet = "Hi " + customerName + ", welcome to " + mStoreName;
+        return greet;
         // do some concatenation and return the result
     }
 
@@ -95,6 +100,9 @@ public class Main {
      * @return a double representing the sale price
      */
     public static double getSalePrice(double fullPrice, double discount) {
+     
+     double salePrice = fullPrice * (1 - discount);
+        return salePrice;
         // do some math and return the sale price
     }
 
@@ -108,6 +116,10 @@ public class Main {
      * @return a double representing the clearance price
      */
     public static double getClearancePrice(double fullPrice, double discount) {
+     
+     double salePrice = getSalePrice(fullPrice, discount);
+        double clearancePrice = salePrice / 2.0;
+        return clearancePrice;
         // A) calculate the sale price, then B) take off the extra 50% to get the clearance price
 
         // hint - consider the DRY principle: Don't Repeat Yourself!
@@ -131,6 +143,22 @@ public class Main {
      * @return the discount level, a double between 0.0 and 1.0
      */
     public static double getBulkDiscount(int quantityPurchased) {
+     
+       if (quantityPurchased >= 5 && quantityPurchased < 10){
+            return 0.05
+        }
+        else if (quantityPurchased >= 10 && quantityPurchased < 15){
+            return 0.1
+        }
+        else if (quantityPurchased >= 15 && quantityPurchased < 20){
+            return 0.15
+        }
+        else {
+            return 0.0;
+        }
+        // there are multiple ways to do this - we discussed a situation where the remainder from
+        // division is truncated (removed). Can you use that to help you here?
+    }
         // there are multiple ways to do this - we discussed a situation where the remainder from
         // division is truncated (removed). Can you use that to help you here?
     }
