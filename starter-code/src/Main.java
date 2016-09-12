@@ -1,6 +1,7 @@
 /**
- * Functions and Scope Homework
- * Created by charlie on 6/21/16.
+ Dear Instructor: I am unfortunately very behind, and am trying to grasp this but wanted to submit this regardless
+ just to get it submitted. I will be working on this in the afternoon and will update the repository
+ upon completion.- Raymour Rad
  */
 public class Main {
 
@@ -11,10 +12,11 @@ public class Main {
         // Pretend you're running an online store. Complete the "helper" methods below and call them here in main().
 
         // 1) Complete the setStoreName() method below and use it to save your store's name
-        setStoreName("put your store's name here, e.g. Bob's Discount Warehouse");
+        setStoreName("Raymour and Flanigan");
 
         // 2) Complete the greetCustomer() method below
-        String greeting = greetCustomer("put a customer name here");
+
+        String greeting = greetCustomer("Andrew");
         System.out.println(greeting);
 
 
